@@ -30,7 +30,11 @@
      ->Indica quais branches estão abertas e qual estamos visualizando.
 - git checkout
 
-  ->Escolhe em qual branch quer estar. 
+  ->Escolhe em qual branch quer estar.
+
+- git merge
+
+    ->Trás para sua branch atual, alguma outra que esteja ativa.
 
 
   
