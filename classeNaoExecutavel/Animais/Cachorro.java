@@ -1,23 +1,17 @@
 package classeNaoExecutavel.Animais;
 
-public class Cachorro {
+public class Cachorro extends Animal {
 //atributos
     static int numeroDeCachorros;
-    private String name;
-    private String cor;
-    private int altura;
-    private double peso;
     private int tamanhoDoRabo;
-    private String estadoDeEspirito;
+
+    
 //------------------------------------
 
 //construtores
     public Cachorro ( ){};
     public Cachorro(String name, String cor, int altura, double peso, int tamanhoDoRabo, String estadoDeEspirito){
-        this.name = name;
-        this.cor = cor;
-        this.altura = altura;
-        this.peso = peso;
+        super(name,cor,altura,peso,estadoDeEspirito);
         this.tamanhoDoRabo = tamanhoDoRabo;
         numeroDeCachorros ++;
     }
@@ -75,14 +69,7 @@ public class Cachorro {
         this.name = nome;
     }
     
-    public void comer () {}
-
-    public void latir () {
-        System.out.println("AUAU!!");
-    }
-    public String pegar(){
-        return "Bolinha";
-    }
+    
 //---------------------------------------
     public String interagir(String acao){
         switch (acao) {
@@ -109,6 +96,10 @@ public class Cachorro {
         return "Cachorro{" +
                 "nome='" + name + '\'' +
                 '}';
+    }
+    @Override
+    public void soar (){
+        System.out.println("AU AU!");
     }
     
 }
