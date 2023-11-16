@@ -2,6 +2,7 @@ package classeNaoExecutavel.Animais;
 
 public class Cachorro {
 //atributos
+    static int numeroDeCachorros;
     private String name;
     private String cor;
     private int altura;
@@ -18,6 +19,7 @@ public class Cachorro {
         this.altura = altura;
         this.peso = peso;
         this.tamanhoDoRabo = tamanhoDoRabo;
+        numeroDeCachorros ++;
     }
 //------------------------------
 //metodos
@@ -31,6 +33,10 @@ public class Cachorro {
 
     public String getEstadoDeEspirito(){
         return this.estadoDeEspirito;
+    }
+
+    public int getNumeroDeCachorros(){
+        return this.numeroDeCachorros;
     }
 
     public int getAltura(){
@@ -47,6 +53,10 @@ public class Cachorro {
 
     public void setCor(String cor){
         this.cor = cor;
+    }
+
+    public void setNumeroDeCachorros(int numeroDeCachorros){
+        this.numeroDeCachorros = numeroDeCachorros;
     }
 
     public void setAltura(int altura){
@@ -93,6 +103,12 @@ public class Cachorro {
             break;
         }
         return estadoDeEspirito;
+    }
+    @Override
+    public String toString(){
+        return "Cachorro{" +
+                "nome='" + name + '\'' +
+                '}';
     }
     
 }
